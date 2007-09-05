@@ -1,0 +1,563 @@
+# data file for the Fltk User Interface Designer (fluid)
+version 1.0107 
+header_name {.h} 
+code_name {.cxx}
+class OBF_GUI {open
+} {
+  Function {OBF_GUI()} {open
+  } {
+    Fl_Window wndPrincipal {
+      label {Olimpíada Brasileira de Física} open
+      xywh {22 22 785 585} type Double resizable visible
+    } {
+      Fl_Group {} {open
+        xywh {10 10 185 85}
+      } {
+        Fl_Button {} {
+          label {&Novo arquivo de dados}
+          tooltip {Cria um novo arquivo de dados para armazenar os dados inseridos no sistema.} image {../../img/png/empty.png} xywh {10 10 90 85} box THIN_UP_BOX labelsize 9 align 128
+        }
+        Fl_Button {} {
+          label {A&brir arquivo de dados}
+          tooltip {Abre um arquivo de dados criado anteriormente para continuar a trabalhar no mesmo.} image {../../img/png/open.png} xywh {105 10 90 85} box THIN_UP_BOX labelsize 9 align 128
+        }
+      }
+      Fl_Group {} {open
+        xywh {10 105 765 215} deactivate
+      } {
+        Fl_Box {} {
+          xywh {10 105 765 135} box ENGRAVED_FRAME
+        }
+        Fl_Input {} {
+          label {Nome:}
+          xywh {85 115 445 25} box ENGRAVED_BOX labelfont 1 labelsize 13 textsize 13
+        }
+        Fl_Choice {} {
+          label {Série:}
+          xywh {585 115 55 25} box EMBOSSED_BOX down_box FLAT_BOX labelfont 1 labelsize 13 textsize 13
+        } {
+          MenuItem {} {
+            label { }
+            xywh {30 30 34 21}
+          }
+          MenuItem {} {
+            label 8
+            xywh {20 20 34 21}
+          }
+          MenuItem {} {
+            label 1
+            xywh {20 20 34 21}
+          }
+          MenuItem {} {
+            label 2
+            xywh {20 20 34 21}
+          }
+          MenuItem {} {
+            label 3
+            xywh {20 20 34 21}
+          }
+        }
+        Fl_Input {} {
+          label {Nota:}
+          xywh {700 115 65 25} type Int box ENGRAVED_BOX labelfont 1 labelsize 13 textsize 13
+        }
+        Fl_Input {} {
+          label {E-mail:}
+          xywh {85 145 375 25} box ENGRAVED_BOX labelsize 13 textsize 13
+        }
+        Fl_Box {} {
+          label {Telefone: (}
+          xywh {470 146 82 23}
+        }
+        Fl_Input {} {
+          xywh {555 145 35 25} type Int box ENGRAVED_BOX labelsize 13 textsize 13
+        }
+        Fl_Box {} {
+          label {)}
+          xywh {591 146 15 23}
+        }
+        Fl_Input {} {
+          xywh {610 145 155 25} type Int box ENGRAVED_BOX labelsize 13 textsize 13
+        }
+        Fl_Input {} {
+          label {Endereço:}
+          xywh {85 175 680 25} box ENGRAVED_BOX labelsize 13 textsize 13
+        }
+        Fl_Input {} {
+          label {CEP:}
+          xywh {85 205 105 25} type Int box ENGRAVED_BOX labelsize 13 textsize 13
+        }
+        Fl_Input {} {
+          label {Cidade:}
+          xywh {260 205 380 25} box ENGRAVED_BOX labelsize 13 textsize 13
+        }
+        Fl_Return_Button {} {
+          label {&Adicionar}
+          tooltip {Adiciona os dados que estão escritos no formulário a uma nova linha na tabela de alunos.} image {../../img/png/insert_table_row.png} xywh {10 255 85 55} box THIN_UP_BOX labelsize 9
+        }
+        Fl_Button {} {
+          label {&Mudar}
+          tooltip {Muda os dados da linha selecionada na tabela de alunos para os que estão escritos no formulário.} image {../../img/png/write_paper.png} xywh {100 255 65 55} box THIN_UP_BOX labelsize 9
+        }
+        Fl_Button {} {
+          label {&Remover}
+          tooltip {Remove a linha selecionada da tabela de alunos.} image {../../img/png/delete_table_row.png} xywh {170 255 65 55} box THIN_UP_BOX labelsize 9
+        }
+        Fl_Choice {} {
+          label {Estado:}
+          xywh {710 205 55 25} box EMBOSSED_BOX down_box FLAT_BOX labelfont 1 labelsize 13 textsize 13
+        } {
+          MenuItem {} {
+            label { }
+            xywh {70 70 34 21}
+          }
+          MenuItem {} {
+            label AC
+            xywh {60 60 34 21}
+          }
+          MenuItem {} {
+            label AL
+            xywh {60 60 34 21}
+          }
+          MenuItem {} {
+            label AP
+            xywh {60 60 34 21}
+          }
+          MenuItem {} {
+            label AM
+            xywh {60 60 34 21}
+          }
+          MenuItem {} {
+            label BA
+            xywh {70 70 34 21}
+          }
+          MenuItem {} {
+            label CE
+            xywh {80 80 34 21}
+          }
+          MenuItem {} {
+            label DF
+            xywh {90 90 34 21}
+          }
+          MenuItem {} {
+            label ES
+            xywh {100 100 34 21}
+          }
+          MenuItem {} {
+            label GO
+            xywh {110 110 34 21}
+          }
+          MenuItem {} {
+            label MA
+            xywh {120 120 34 21}
+          }
+          MenuItem {} {
+            label MT
+            xywh {130 130 34 21}
+          }
+          MenuItem {} {
+            label MS
+            xywh {140 140 34 21}
+          }
+          MenuItem {} {
+            label MG
+            xywh {150 150 34 21}
+          }
+          MenuItem {} {
+            label PA
+            xywh {160 160 34 21}
+          }
+          MenuItem {} {
+            label PB
+            xywh {170 170 34 21}
+          }
+          MenuItem {} {
+            label PR
+            xywh {180 180 34 21}
+          }
+          MenuItem {} {
+            label PE
+            xywh {190 190 34 21}
+          }
+          MenuItem {} {
+            label PI
+            xywh {200 200 34 21}
+          }
+          MenuItem {} {
+            label RJ
+            xywh {210 210 34 21}
+          }
+          MenuItem {} {
+            label RN
+            xywh {220 220 34 21}
+          }
+          MenuItem {} {
+            label RS
+            xywh {230 230 34 21}
+          }
+          MenuItem {} {
+            label RO
+            xywh {240 240 34 21}
+          }
+          MenuItem {} {
+            label RR
+            xywh {250 250 34 21}
+          }
+          MenuItem {} {
+            label SC
+            xywh {260 260 34 21}
+          }
+          MenuItem {} {
+            label SP
+            xywh {270 270 34 21}
+          }
+          MenuItem {} {
+            label SE
+            xywh {280 280 34 21}
+          }
+          MenuItem {} {
+            label TO
+            xywh {290 290 34 21}
+          }
+        }
+        Fl_Output {} {selected
+          xywh {245 255 530 55} type Multiline box NO_BOX
+        }
+      }
+      Fl_Box {} {
+        label {(aqui ficará a tabela de alunos)}
+        xywh {10 315 765 260} box THIN_UP_FRAME align 16 deactivate resizable
+      }
+      Fl_Group {} {open
+        xywh {220 10 300 85} deactivate
+      } {
+        Fl_Button {} {
+          label {Informações da &escola}
+          tooltip {Abre a tela de edição das informações da escola.} image {../../img/png/escola.png} xywh {220 10 90 85} box THIN_UP_BOX labelsize 9 align 128
+        }
+        Fl_Button {} {
+          label {Enviar via &Internet}
+          tooltip {Envia os dados digitados para a SBF via Internet.} image {../../img/png/internet.png} xywh {335 10 90 85} box THIN_UP_BOX labelsize 9 align 128
+        }
+        Fl_Button {} {
+          label {Enviar via &disquete}
+          tooltip {Gera um arquivo para ser enviado por correio à SBF via disquete ou CD-ROM, ou para ser enviado via Internet a partir de um navegador Web.} image {../../img/png/disquete.png} xywh {430 10 90 85} box THIN_UP_BOX labelsize 9 align 128
+        }
+      }
+    }
+    Fl_Window wndInfoEscola {
+      label {Informações da Escola}
+      xywh {27 27 535 365} type Double hide modal
+    } {
+      Fl_Group {} {
+        label {Informações da Escola} open
+        xywh {10 30 515 75} box ENGRAVED_FRAME labelfont 1 labelsize 16
+      } {
+        Fl_Input {} {
+          label {Nome:}
+          xywh {80 40 310 25} box ENGRAVED_BOX labelfont 1 labelsize 13 textsize 13
+        }
+        Fl_Input {} {
+          label {ID:}
+          tooltip {Código numérico de identificação da escola.} xywh {425 40 90 25} type Int box ENGRAVED_BOX labelfont 1 labelsize 13 textsize 13
+        }
+        Fl_Input {} {
+          label {Cidade:}
+          xywh {80 70 310 25} box ENGRAVED_BOX labelfont 1 labelsize 13 textsize 13
+        }
+        Fl_Choice {} {
+          label {Estado:}
+          xywh {460 70 55 25} box EMBOSSED_BOX down_box FLAT_BOX labelfont 1 labelsize 13 textsize 13
+        } {
+          MenuItem {} {
+            label { }
+            xywh {70 70 34 21}
+          }
+          MenuItem {} {
+            label AC
+            xywh {60 60 34 21}
+          }
+          MenuItem {} {
+            label AL
+            xywh {60 60 34 21}
+          }
+          MenuItem {} {
+            label AP
+            xywh {60 60 34 21}
+          }
+          MenuItem {} {
+            label AM
+            xywh {60 60 34 21}
+          }
+          MenuItem {} {
+            label BA
+            xywh {70 70 34 21}
+          }
+          MenuItem {} {
+            label CE
+            xywh {80 80 34 21}
+          }
+          MenuItem {} {
+            label DF
+            xywh {90 90 34 21}
+          }
+          MenuItem {} {
+            label ES
+            xywh {100 100 34 21}
+          }
+          MenuItem {} {
+            label GO
+            xywh {110 110 34 21}
+          }
+          MenuItem {} {
+            label MA
+            xywh {120 120 34 21}
+          }
+          MenuItem {} {
+            label MT
+            xywh {130 130 34 21}
+          }
+          MenuItem {} {
+            label MS
+            xywh {140 140 34 21}
+          }
+          MenuItem {} {
+            label MG
+            xywh {150 150 34 21}
+          }
+          MenuItem {} {
+            label PA
+            xywh {160 160 34 21}
+          }
+          MenuItem {} {
+            label PB
+            xywh {170 170 34 21}
+          }
+          MenuItem {} {
+            label PR
+            xywh {180 180 34 21}
+          }
+          MenuItem {} {
+            label PE
+            xywh {190 190 34 21}
+          }
+          MenuItem {} {
+            label PI
+            xywh {200 200 34 21}
+          }
+          MenuItem {} {
+            label RJ
+            xywh {210 210 34 21}
+          }
+          MenuItem {} {
+            label RN
+            xywh {220 220 34 21}
+          }
+          MenuItem {} {
+            label RS
+            xywh {230 230 34 21}
+          }
+          MenuItem {} {
+            label RO
+            xywh {240 240 34 21}
+          }
+          MenuItem {} {
+            label RR
+            xywh {250 250 34 21}
+          }
+          MenuItem {} {
+            label SC
+            xywh {260 260 34 21}
+          }
+          MenuItem {} {
+            label SP
+            xywh {270 270 34 21}
+          }
+          MenuItem {} {
+            label SE
+            xywh {280 280 34 21}
+          }
+          MenuItem {} {
+            label TO
+            xywh {290 290 34 21}
+          }
+        }
+      }
+      Fl_Group {} {
+        label {Professor Responsável} open
+        xywh {10 140 515 75} box ENGRAVED_FRAME labelfont 1 labelsize 16
+      } {
+        Fl_Input {} {
+          label {Nome:}
+          xywh {80 150 435 25} box ENGRAVED_BOX labelfont 1 labelsize 13 textsize 13
+        }
+        Fl_Input {} {
+          label {E-mail:}
+          xywh {80 180 435 25} box ENGRAVED_BOX labelfont 1 labelsize 13 textsize 13
+        }
+      }
+      Fl_Group {} {
+        label {Processo de seleção} open
+        xywh {10 245 515 70} box ENGRAVED_FRAME labelfont 1 labelsize 16
+      } {
+        Fl_Box {} {
+          label {Foi aplicada a prova da primeira fase da OBF na escola?}
+          xywh {20 253 495 24}
+        }
+        Fl_Group {} {open
+          xywh {205 280 125 25}
+        } {
+          Fl_Check_Button {} {
+            label Sim
+            xywh {210 280 50 25} type Radio down_box PLASTIC_UP_BOX color 7
+          }
+          Fl_Check_Button {} {
+            label {Não}
+            xywh {275 280 50 25} type Radio down_box PLASTIC_UP_BOX color 7
+          }
+        }
+      }
+      Fl_Return_Button {} {
+        label Confirmar
+        xywh {130 325 130 30} box THIN_UP_BOX
+      }
+      Fl_Button {} {
+        label Cancelar
+        xywh {265 325 130 30} box THIN_UP_BOX
+      }
+    }
+    Fl_Window wndInternet {
+      label {Enviar via Internet}
+      xywh {27 27 385 435} type Double hide modal
+    } {
+      Fl_Group {} {
+        xywh {10 8 365 64} box ENGRAVED_FRAME
+      } {
+        Fl_Box {} {
+          image {../../img/png/internet.png} xywh {25 13 50 52}
+        }
+        Fl_Box {} {
+          label {Através desta opção os dados serão enviados diretamente aos servidores da SBF. Por favor forneça sua senha e confirme se os dados abaixo estão corretos.}
+          xywh {80 18 285 42} labelsize 10 align 128
+        }
+      }
+      Fl_Group {} {
+        xywh {10 81 365 76} box ENGRAVED_FRAME
+      } {
+        Fl_Input {} {
+          label {Digite a senha:}
+          xywh {160 93 205 25} type Secret box ENGRAVED_BOX labelfont 1 labelsize 13 textsize 13
+        }
+        Fl_Input {} {
+          label {Confirme a senha:}
+          xywh {160 123 205 25} type Secret box ENGRAVED_BOX labelfont 1 labelsize 13 textsize 13
+        }
+      }
+      Fl_Group {} {
+        label {CONFIRME COM ATENÇÃO}
+        xywh {10 191 365 100} box ENGRAVED_FRAME labelfont 1 labelsize 20
+      } {
+        Fl_Input {} {
+          label {E-mail do professor:}
+          xywh {170 197 195 25} box ENGRAVED_BOX labelfont 1 labelsize 13 textsize 13
+        }
+        Fl_Input {} {
+          label {ID da escola:}
+          xywh {170 225 195 25} type Int box ENGRAVED_BOX labelfont 1 labelsize 13 textsize 13
+        }
+        Fl_Input {} {
+          label {Ano atual:}
+          xywh {170 255 195 25} type Int box ENGRAVED_BOX labelfont 1 labelsize 13 textsize 13
+        }
+      }
+      Fl_Group {} {
+        xywh {10 299 365 80} box ENGRAVED_FRAME
+      } {
+        Fl_Box {} {
+          label {IMPORTANTE: Se dados de sua escola houverem sido previamente enviados, os dados antigos serão apagados e substituídos pelos novos dados.}
+          xywh {15 299 355 80} labelfont 1 labelsize 13 align 128
+        }
+      }
+      Fl_Return_Button {} {
+        label Enviar
+        xywh {85 390 100 35} box THIN_UP_BOX
+      }
+      Fl_Button {} {
+        label Cancelar
+        xywh {195 390 100 35} box THIN_UP_BOX
+      }
+    }
+    Fl_Window wndDisquete {
+      label {Enviar via disquete}
+      xywh {27 27 385 460} type Double hide modal
+    } {
+      Fl_Group {} {open
+        xywh {10 8 365 94} box ENGRAVED_FRAME
+      } {
+        Fl_Box {} {
+          image {../../img/png/disquete.png} xywh {25 18 50 52}
+        }
+        Fl_Box {} {
+          label {Esta opção gera um arquivo autenticado digitalmente que pode ser enviado à SBF via correio dentro de um disquete ou CD-ROM. O arquivo pode também ser enviado por meio de um navegador Web pelo endereço:}
+          xywh {80 19 285 56} labelsize 10 align 128
+        }
+        Fl_Box {} {
+          label {http://www.sbf1.sbfisica.org.br/olimpiadas/obf/envio_primeira_fase.php}
+          xywh {15 78 350 17} labelsize 9 align 128
+        }
+      }
+      Fl_Group {} {open
+        xywh {10 106 365 76} box ENGRAVED_FRAME
+      } {
+        Fl_Input {} {
+          label {Digite a senha:}
+          xywh {160 118 205 25} type Secret box ENGRAVED_BOX labelfont 1 labelsize 13 textsize 13
+        }
+        Fl_Input {} {
+          label {Confirme a senha:}
+          xywh {160 148 205 25} type Secret box ENGRAVED_BOX labelfont 1 labelsize 13 textsize 13
+        }
+      }
+      Fl_Group {} {
+        label {CONFIRME COM ATENÇÃO} open
+        xywh {10 216 365 105} box ENGRAVED_FRAME labelfont 1 labelsize 20
+      } {
+        Fl_Input {} {
+          label {E-mail do professor:}
+          xywh {170 222 195 25} box ENGRAVED_BOX labelfont 1 labelsize 13 textsize 13
+        }
+        Fl_Input {} {
+          label {ID da escola:}
+          xywh {170 255 195 25} type Int box ENGRAVED_BOX labelfont 1 labelsize 13 textsize 13
+        }
+        Fl_Input {} {
+          label {Ano atual:}
+          xywh {170 285 195 25} type Int box ENGRAVED_BOX labelfont 1 labelsize 13 textsize 13
+        }
+      }
+      Fl_Group {} {open
+        xywh {10 329 365 77} box ENGRAVED_FRAME
+      } {
+        Fl_Box {} {
+          label {IMPORTANTE: Assegure que todos os dados acima estejam corretos, caso contrário a SBF não será capaz de comprovar a autenticidade do arquivo que será enviado.}
+          xywh {15 329 355 77} labelfont 1 labelsize 13 align 128
+        }
+      }
+      Fl_Return_Button {} {
+        label Gerar
+        xywh {85 415 100 35} box THIN_UP_BOX
+      }
+      Fl_Button {} {
+        label Cancelar
+        xywh {195 415 100 35} box THIN_UP_BOX
+      }
+    }
+  }
+  Function {~OBF_GUI()} {open
+  } {
+    code {delete wndPrincipal;
+delete wndInfoEscola;
+delete wndInternet;
+delete wndDisquete;} {}
+  }
+} 

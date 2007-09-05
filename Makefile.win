@@ -1,0 +1,31 @@
+CC	= i386-mingw32msvc-gcc
+CXX	= i386-mingw32msvc-g++
+WINDRES = i386-mingw32msvc-windres
+CFLAGS	= -O2 -Wall
+CXXFLAGS= -O2 -Wall `fltk-config --cxxflags`
+INCLUDES= -I.
+LDFLAGS	= /opt/xmingw/i386-mingw32msvc/lib/libfltk.a -lgdi32 -luuid -lole32 -lwsock32 -lcomdlg32 -mwindows
+OBJS	= crypto/sha2.o crypto/digest.o crypto/hmac.o \
+	  sqlite/sqlite3.o sqlite/sql.o \
+	  network/postfile.o network/browser.o \
+	  FL/Fl_Table.o FL/Fl_Table_Row.o FL/Fl_SQL_Table.o \
+	  img/idata.o img/images.o gui/gui.o \
+	  resource.o core.o main.o
+
+%.o: %.c
+	$(CC) $(INCLUDES) $(CFLAGS) -c $< -o $*.o
+
+%.o: %.cpp
+	$(CXX) $(INCLUDES) $(CXXFLAGS) -c $< -o $*.o
+
+%.o: %.rc
+	$(WINDRES) $(INCLUDES) $< -o $*.o
+
+all: obf
+
+obf: $(OBJS)
+	$(CXX) $(OBJS) $(LDFLAGS) -o obf.exe
+
+clean:
+	rm -f $(OBJS) obf.exe
+

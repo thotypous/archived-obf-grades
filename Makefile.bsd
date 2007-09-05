@@ -1,0 +1,27 @@
+CC	= gcc
+CXX	= g++
+CFLAGS	= -O2 -Wall
+CXXFLAGS= -O2 -Wall `fltk-config --cxxflags`
+INCLUDES= -I.
+LDFLAGS	= `fltk-config --ldstaticflags` -lpthread
+OBJS	= crypto/sha2.o crypto/digest.o crypto/hmac.o \
+	  sqlite/sqlite3.o sqlite/sql.o \
+	  network/postfile.o network/browser.o \
+	  FL/Fl_Table.o FL/Fl_Table_Row.o FL/Fl_SQL_Table.o \
+	  img/idata.o img/images.o gui/gui.o \
+	  core.o main.o
+
+%.o: %.c
+	$(CC) $(INCLUDES) $(CFLAGS) -c $< -o $*.o
+
+%.o: %.cpp
+	$(CXX) $(INCLUDES) $(CXXFLAGS) -c $< -o $*.o
+
+all: obf
+
+obf: $(OBJS)
+	$(CXX) $(OBJS) $(LDFLAGS) -o obf
+
+clean:
+	rm -f $(OBJS) obf
+
